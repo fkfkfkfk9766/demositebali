@@ -1,0 +1,727 @@
+@charset "utf-8";
+
+/* 共通*/
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 1.6rem;
+    letter-spacing: .05em;
+    line-height: 1.8;
+    color: #171717;
+    font-family: 'Noto Serif JP', serif;
+}
+
+img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+a {
+    outline: none;
+}
+
+li {
+    list-style: none;
+}
+
+.section-wrapper {
+    padding: 100px 0 70px;
+}
+
+.section-title {
+    color: #282f35;
+    font-size: 2.4rem;
+    text-align: center;
+    margin: 0 auto 80px;
+    padding: 0 20px;
+}
+
+.section-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+.br-sp {
+    display: none;
+}
+
+/* 
+/共通 */
+
+/* ヘッダー */
+
+.header {
+    padding: 20px 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    box-sizing: border-box;
+    width: 100%;
+    transition: .3s;
+}
+
+.header a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 2.4rem;
+}
+
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0  auto;
+}
+
+.global-navList {
+    display: flex;
+}
+
+.global-navItem {
+    margin-right: 3.2rem;
+}
+
+.header {
+    padding: 30px 4vw 0;
+}
+
+.global-nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/hamburger-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+}
+
+
+.global-navList {
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;      
+}
+
+.global-navItem {
+    margin: 0 0 30px;
+}
+
+
+.hamburger-menu {
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 4vw;
+}
+.hamburger-menu .line {
+display: block;
+height: 3px;
+width: 30px;
+background-color: #fff;
+}
+.top,
+.mid{
+margin-bottom: 8px;
+}
+
+.hamburger-menu.cross .top {
+transform: rotate(45deg) translate(8px,8px);
+}
+
+.hamburger-menu.cross .mid {
+opacity: 0;
+}
+
+.hamburger-menu.cross .bottom {
+transform: rotate(-45deg) translate(8px,-8px);
+}
+
+body.noscroll {
+    overflow: hidden;
+}
+
+button {
+background-color: transparent;
+border: none;
+cursor: pointer;
+padding: 0%;
+appearance:none;;
+outline: none;
+}
+
+
+
+/* 
+ヘッダー */
+
+
+/* メイン */
+
+.main-visual {
+    height: 100vh;
+    min-height: 550px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.main-visual img {
+    height: 100vh;
+    min-height: 550px;
+    object-fit: cover;
+}
+
+.main-copy-set {
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    top: 20rem;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+
+.ttl-large {
+    font-size: 5.8rem;
+    color:#fff;
+}
+
+.ttl-small {
+    font-size: 3.2rem;
+    -ms-writing-mode: tb-rl;
+	-webkit-writing-mode: vertical-rl;
+	writing-mode: vertical-rl;
+    color:#fff;
+}
+
+
+/* 
+/メイン */
+
+/* 
+人気のエリア */
+
+.tour-container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+}
+
+.tour-container img {
+    height: 250px;
+    opacity:1;
+	transition: .3s ease-in-out;
+}
+
+.tour-item {
+    position: relative;
+}
+
+.tour-item a:hover {
+    opacity:0.8;
+}
+
+
+
+.tour-item p {
+position: absolute;
+color: white;
+font-weight: bold;
+font-size: 2.4rem;
+top: 50%;
+left: 50%;
+-ms-transform: translate(-50%,-50%);
+-webkit-transform: translate(-50%,-50%);
+transform: translate(-50%,-50%);
+margin:0;
+padding:0;
+background: linear-gradient(to top, rgba(0, 0, 0, 0.50), transparent);
+}
+
+
+/* 
+/* バリ島について */
+
+.bg-concept {
+    position: relative;
+    background-image: url(../images/about-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    max-height: 450px;
+}
+
+.concept-textBox {
+    padding: 6.4rem;
+}
+.concept-ttl {
+    font-weight: bold;
+    font-size: 3.2rem;
+    color: #fff;
+}
+
+.concept-text {
+    color: #fff;
+    font-size: 2.4;
+}
+
+/* 
+バリ島について */
+
+/* 
+おすすめのホテル */
+
+.wrap {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+grid-gap: 20px;
+}
+
+.item {
+display: grid;
+grid-template-rows: max-content 150px 1fr;
+padding: 30px 20px;
+background-color: #dddddd;
+break-inside: avoid;
+line-height: 1.4;
+border-radius: 8px;
+}
+
+h2 {
+display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 2;
+margin-bottom: 20px;
+font-size: 1.6rem;
+font-weight: 700;
+overflow: hidden;
+}
+
+.item img {
+border-radius: 8px;
+display: block;
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.item p {
+display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 3;
+margin: 20px 0;
+font-size: 1.4rem;
+overflow: hidden;
+}
+
+ul {
+display: flex;
+font-size: 1.3rem;
+}
+
+time {
+margin-right: 20px;
+}
+
+
+
+/* 
+おすすめのホテル */
+
+
+
+
+
+/* 
+お問い合わせ */
+.link-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 30px 70px;
+    width: 450px;
+    font-size: 24px;
+    font-weight: 700;
+    background-color: #fff;
+    border: 1px solid #333333;
+    border-radius: 62px;
+    text-decoration: none;
+}
+
+.list-icon {
+    text-decoration: none;
+}
+
+/* /contact */
+
+/* 
+フッター */
+
+.footer {
+    background-color: #f7f7f7;
+}
+
+dl {
+    display: flex;
+    justify-content: space-between;
+}
+
+dt {
+color: #000;
+padding: 20px 30px;
+width: 230px;
+}
+
+dd {
+color: #000;
+padding: 20px 30px;
+width: calc(100% - 230px);
+border-bottom: 1px solid #6f6f6f;
+}
+.close {
+    display: none;
+}
+
+
+
+/* 
+/フッター */
+
+/*------------------------------------------
+768-480     - タブレット縦長
+480-less    - スマホ
+--------------------------------------------*/
+
+@media all and (min-width: 480px) and (max-width: 768px) { 
+    
+/* 
+共通 */
+    .section-wrapper {
+        padding: 100px 0 40px;
+    }
+    
+    .section-title {
+        padding: 0 4vw;
+        font-size: 3rem;
+        margin-bottom: 50px;
+    }
+/* 
+共通 */
+
+/*
+ヘッダー */
+    .header {
+        padding: 30px 4vw 0;
+    }
+
+    .global-nav {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .global-navList {
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;      
+    }
+
+    .global-navItem {
+        margin: 0 0 30px;
+    }
+    
+
+    .hamburger-menu {
+        display: block;
+        position: absolute;
+        top: 30px;
+        right: 4vw;
+    }
+    .hamburger-menu .line {
+    display: block;
+    height: 3px;
+    width: 30px;
+    background-color: #fff;
+    }
+    .top,
+    .mid{
+    margin-bottom: 8px;
+    }
+    
+    .hamburger-menu.cross .top {
+    transform: rotate(45deg) translate(8px,8px);
+    }
+    
+    .hamburger-menu.cross .mid {
+    opacity: 0;
+    }
+    
+    .hamburger-menu.cross .bottom {
+    transform: rotate(-45deg) translate(8px,-8px);
+    }
+    
+    body.noscroll {
+        overflow: hidden;
+    }
+    
+    button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0%;
+    appearance:none;;
+    outline: none;
+    }
+/* 
+ヘッダー */
+
+/* 
+メイン*/
+    .main-copy-set {
+        position: absolute;
+        width: 80%;
+        left: 30%;
+        top: 150px;
+        display: flex;
+        gap: 60px;
+    }
+    
+    
+    .ttl-large {
+        font-size: 6.4rem;
+        -ms-writing-mode: tb-rl;
+        -webkit-writing-mode: vertical-rl;
+        writing-mode: vertical-rl;
+        color:#fff;
+    }
+    
+    .ttl-small {
+        font-size: 3.2rem;
+        -ms-writing-mode: tb-rl;
+        -webkit-writing-mode: vertical-rl;
+        writing-mode: vertical-rl;
+        color:#fff;
+    }
+/* 
+メイン */
+}
+
+/* /----------タブレット---------------- */
+
+
+/* ------------スマホ------------------ */
+
+@media all and (max-width: 480px) {
+    
+/* 
+共通 */
+    .section-title {
+        padding: 0 4vw;
+        font-size: 2rem;
+        margin-bottom: 50px;
+    }
+
+    .br-pc {
+        display: none;
+    }
+
+    .header {
+        padding: 30px 4vw 0;
+    }
+
+    .global-nav {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .global-navList {
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;      
+    }
+
+    .global-navItem {
+        margin: 0 0 30px;
+    }
+    
+
+    .hamburger-menu {
+        display: block;
+        position: absolute;
+        top: 30px;
+        right: 4vw;
+    }
+    .hamburger-menu .line {
+    display: block;
+    height: 3px;
+    width: 30px;
+    background-color: #fff;
+    }
+    .top,
+    .mid{
+    margin-bottom: 8px;
+    }
+    
+    .hamburger-menu.cross .top {
+    transform: rotate(45deg) translate(8px,8px);
+    }
+    
+    .hamburger-menu.cross .mid {
+    opacity: 0;
+    }
+    
+    .hamburger-menu.cross .bottom {
+    transform: rotate(-45deg) translate(8px,-8px);
+    }
+    
+    body.noscroll {
+        overflow: hidden;
+    }
+    
+    button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0%;
+    appearance:none;;
+    outline: none;
+    }
+/* 共通 */
+
+/* 
+メイン */
+    .main-copy-set {
+        position: absolute;
+        width: 80%;
+        left: 20%;
+        top: 150px;
+        display: flex;
+        gap: 60px;
+    }
+    
+    
+    .ttl-large {
+        font-size: 3.2rem;
+        -ms-writing-mode: tb-rl;
+        -webkit-writing-mode: vertical-rl;
+        writing-mode: vertical-rl;
+        color:#fff;
+    }
+    
+    .ttl-small {
+        font-size: 1.6rem;
+        -ms-writing-mode: tb-rl;
+        -webkit-writing-mode: vertical-rl;
+        writing-mode: vertical-rl;
+        color:#fff;
+    }
+/* 
+メイン */
+
+/* 
+人気のエリア */
+.tour-item p {
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    font-size: 1.8rem;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    margin:0;
+    padding:0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.50), transparent);
+    }
+    
+/* 
+人気のエリア */
+
+/* 
+バリに島について */
+.concept-textBox {
+    padding: 0;
+}
+
+.concept-ttl {
+    font-weight: bold;
+    font-size: 1.6rem;
+    color: #fff;
+    padding: 1.1rem;
+}
+
+.concept-text {
+    color: #fff;
+    font-size: 1.4rem;
+    margin-top: 2.4rem;
+}
+
+
+
+/* 
+お問い合わせ */
+
+.link-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px 50px;
+    width: 250px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    background-color: #fff;
+    border: 1px solid #333333;
+    border-radius: 62px;
+    text-decoration: none;
+}
+
+/* footer */
+
+        dl {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+        
+        dt {
+        color: #000;
+        padding: 20px 30px;
+        width: 100%;
+        }
+        
+        dd {
+        color: #000;
+        padding: 20px 30px;
+        width: 100%;
+        border-bottom: 1px solid #6f6f6f;
+        }
+        
+}
